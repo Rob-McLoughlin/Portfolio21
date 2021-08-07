@@ -1,10 +1,7 @@
 import '../styles.css'
 import { useEffect } from 'react'
 import { useRouter } from 'next/router'
-// import { init } from '@/lib/ga'
-import * as gtag from '@/lib/gtag'
 import TagManager from 'react-gtm-module'
-// import GA4React, { useGA4React } from 'ga-4-react'
 
 const tagManagerArgs = {
   gtmId: 'GTM-545LPZB'
