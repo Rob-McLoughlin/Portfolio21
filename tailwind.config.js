@@ -6,7 +6,8 @@ module.exports = {
     extend: {
       colors: {
         black: '#3C3C3C',
-        white: '#FFFFFF'
+        white: '#FFFFFF',
+        pink: '#F865B2'
       },
       fontFamily: {
         serif: ['Libre Baskerville, serif'],
