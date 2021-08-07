@@ -1,4 +1,4 @@
-import 'tailwindcss/tailwind.css'
+import '../styles.css'
 import { useEffect } from 'react'
 
 const changeFavicon = src => {
@@ -15,22 +15,11 @@ const changeFavicon = src => {
 
 function MyApp ({ Component, pageProps }) {
   useEffect(() => {
-    const frames = 6
-    let currentFrame = '/favicon/frame-1.ico'
-    let count = 0
-    let interval
     document.addEventListener('visibilitychange', e => {
       if (document.visibilityState === 'hidden') {
-        interval = setInterval(() => {
-          count += 1
-          currentFrame = `/favicon/frame-${count}.ico`
-          changeFavicon(currentFrame)
-          if (count === frames) {
-            count = 0
-          }
-        }, 200)
+        changeFavicon('/favicon/frame-2.ico')
       } else {
-        clearInterval(interval)
+        changeFavicon('/favicon/frame-1.ico')
       }
     })
   }, [])
