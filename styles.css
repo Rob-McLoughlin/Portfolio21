@@ -1,3 +1,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  p {
+    @apply text-black;
+    @apply text-body;
+    @apply mb-10;
+  }
+  p a {
+    @apply hover:text-pink;
+    @apply transition;
+    @apply border-dashed border-b-2 border-black hover:border-solid hover:border-pink;
+  }
+}
