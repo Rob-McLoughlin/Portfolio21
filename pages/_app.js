@@ -1,5 +1,8 @@
 import '../styles.css'
 import { useEffect } from 'react'
+import { useRouter } from 'next/router'
+import { init } from '@/lib/ga'
+import GA4React, { useGA4React } from 'ga-4-react'
 
 const changeFavicon = src => {
   const link = document.createElement('link')
@@ -15,6 +18,9 @@ const changeFavicon = src => {
 
 function MyApp ({ Component, pageProps }) {
   useEffect(() => {
+    // Init GA
+    init(process.env.NEXT_PUBLIC_G)
+
     // Changes the favicon on leaving the page
     document.addEventListener('visibilitychange', e => {
       if (document.visibilityState === 'hidden') {
