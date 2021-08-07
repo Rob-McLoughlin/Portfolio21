@@ -21,6 +21,7 @@ export default function Home ({ books }) {
     <>
       <Head>
         <title>Rob McLoughlin | Designer from Dublin</title>
+        <link rel='icon' href='/favicon/frame-1.ico' />
         <link rel='preconnect' href='https://fonts.googleapis.com' />
         <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin />
         <link
@@ -30,7 +31,8 @@ export default function Home ({ books }) {
       </Head>
       <div className='flex justify-center px-8 bg-white'>
         <main className='relative container mx-auto max-w-2xl lg:max-w-xl py-32'>
-          <div className='absolute top-12 right-12'>
+          <div className='absolute rounded-full top-12 right-6 bg-pink z-0 h-16 w-16' />
+          <div className='absolute top-12 right-12 z-1'>
             <Image
               className='rounded-full'
               src='/rob-linkedin.jpeg'

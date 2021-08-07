@@ -13,3 +13,9 @@ export const projects = {
   'The Ring Finder': 'https://ringfinder.chupi.com',
   'Digital Ring Sizer': 'https://ringsizer.chupi.com/'
 }
+
+export const faviconFrames = [
+  '/favicon/frame-1.ico',
+  '/favicon/frame-2.ico',
+  '/favicon/frame-3.ico'
+]
