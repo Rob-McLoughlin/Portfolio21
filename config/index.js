@@ -1,6 +1,3 @@
-const dev = process.env.NODE_ENV !== 'production'
-const deploymentServer = process.env.VERCEL_URL || 'http://localhost:3000'
-
 export const socials = {
   mail: 'mailto:robbiemcloughlin@gmail.com',
   instagram: 'https://www.instagram.com/rob_mcloughlin',
