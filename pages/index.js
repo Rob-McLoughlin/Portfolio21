@@ -21,13 +21,6 @@ export default function Home ({ books }) {
     <>
       <Head>
         <title>Rob McLoughlin | Designer from Dublin</title>
-        <link rel='icon' href='/favicon/frame-1.ico' />
-        <link rel='preconnect' href='https://fonts.googleapis.com' />
-        <link rel='preconnect' href='https://fonts.gstatic.com' />
-        <link
-          href='https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap'
-          rel='stylesheet'
-        />
       </Head>
       <div className='flex justify-center px-8 bg-white dark dark:bg-black'>
         <main className='relative container mx-auto max-w-2xl lg:max-w-xl py-48'>

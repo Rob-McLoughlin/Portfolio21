@@ -1,8 +1,14 @@
 import '../styles.css'
 import { useEffect } from 'react'
 import { useRouter } from 'next/router'
-import { init } from '@/lib/ga'
-import GA4React, { useGA4React } from 'ga-4-react'
+// import { init } from '@/lib/ga'
+import * as gtag from '@/lib/gtag'
+import TagManager from 'react-gtm-module'
+// import GA4React, { useGA4React } from 'ga-4-react'
+
+const tagManagerArgs = {
+  gtmId: 'GTM-545LPZB'
+}
 
 const changeFavicon = src => {
   const link = document.createElement('link')
@@ -17,9 +23,10 @@ const changeFavicon = src => {
 }
 
 function MyApp ({ Component, pageProps }) {
+  const router = useRouter()
   useEffect(() => {
-    // Init GA
-    init(process.env.NEXT_PUBLIC_G)
+    // Tag Manager
+    TagManager.initialize(tagManagerArgs)
 
     // Changes the favicon on leaving the page
     document.addEventListener('visibilitychange', e => {
@@ -29,7 +36,7 @@ function MyApp ({ Component, pageProps }) {
         changeFavicon('/favicon/frame-1.ico')
       }
     })
-  }, [])
+  }, [router.events])
   return <Component {...pageProps} />
 }
 
