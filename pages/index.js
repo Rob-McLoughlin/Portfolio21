@@ -1,13 +1,12 @@
 import Head from 'next/head'
 import Link from 'next/link'
 import Image from 'next/image'
-import { projects, server, socials } from '../config/index'
-import SocialLinks from '../components/SocialLinks'
+import { projects, socials } from '@/config/index'
+import SocialLinks from '@/components/SocialLinks'
+import { getReadBooks } from '@/lib/notion'
 
 export async function getStaticProps () {
-  const url = '/api/books'
-  const res = await fetch(`${server}${url}`)
-  const books = await res.json()
+  const books = await getReadBooks(5)
   return {
     props: {
       books: books
@@ -23,15 +22,15 @@ export default function Home ({ books }) {
         <title>Rob McLoughlin | Designer from Dublin</title>
         <link rel='icon' href='/favicon/frame-1.ico' />
         <link rel='preconnect' href='https://fonts.googleapis.com' />
-        <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin />
+        <link rel='preconnect' href='https://fonts.gstatic.com' />
         <link
           href='https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap'
           rel='stylesheet'
         />
       </Head>
       <div className='flex justify-center px-8 bg-white'>
-        <main className='relative container mx-auto max-w-2xl lg:max-w-xl py-32'>
-          <div className='absolute rounded-full top-12 right-6 bg-pink z-0 h-16 w-16' />
+        <main className='relative container mx-auto max-w-2xl lg:max-w-xl py-48'>
+          <div className='absolute rounded-full top-12 right-6 border-2 border-dashed border-black z-0 h-16 w-16' />
           <div className='absolute top-12 right-12 z-1'>
             <Image
               className='rounded-full'
@@ -41,22 +40,22 @@ export default function Home ({ books }) {
             />
           </div>
           <section id='#top' className='relative'>
-            <h1 className='mb-4 text-h1 font-serif text-black'>
+            <h1 className='mb-8 text-h1 font-serif text-black'>
               Hi, I’m Rob McLoughlin
             </h1>
-            <p className='mb-10 text-body text-black'>
+            <p>
               I’m a product designer building digital products at{' '}
               <Link href='https://www.wearehuman.ie/'>
-                <a className='font-bold'>Human</a>
+                <a>Human</a>
               </Link>{' '}
               and{' '}
               <Link href='https://www.chupi.com/'>
-                <a className='font-bold'>Chupi</a>
+                <a>Chupi</a>
               </Link>
               . I work across the product life-cycle from strategy and research
               through design and development.
             </p>
-            <p className='text-body text-black'>
+            <p>
               I am not very active online, but you can contact me by email,
               Instagram, Twitter or LinkedIn.
             </p>
@@ -66,12 +65,12 @@ export default function Home ({ books }) {
 
           <section id='about'>
             <h1 className='mb-4 text-h1 font-serif text-black'>About</h1>
-            <p className='mb-10 text-body text-black'>
+            <p>
               I’ve been researching, designing and building digital products for
               5 years. I did my undergraduate in Psychology in IADT. After that,
               I did an MSc in User Experience, also in IADT.
             </p>
-            <p className='mb-10 text-body text-black'>
+            <p>
               While I was in undergrad, I did an internship in Human. When I
               finished my undergrad, I went back and have been there since!
               During my time at Human, the majority of my work has been on
@@ -82,11 +81,11 @@ export default function Home ({ books }) {
                 return (
                   <span key={p[0]}>
                     <Link key={p[1]} href={p[1]}>
-                      <a className='font-bold'>{p[0]}</a>
+                      <a>{p[0]}</a>
                     </Link>
                     {index < Object.entries(projects).length - 1
                       ? ' and '
-                      : index == Object.entries(projects).length - 1
+                      : index === Object.entries(projects).length - 1
                       ? ''
                       : ', '}
                   </span>
@@ -94,20 +93,19 @@ export default function Home ({ books }) {
               })}
               .
             </p>
-            <p className='mb-10 text-body text-black'>
+            <p>
               I like to read about design, I go through phases of chomping
               through books about design and business.
             </p>
             <h2 className='mb-4 text-h2 font-serif text-black'>
               Recently Read Books
             </h2>
-            <p className='mb-8 text-body'>
+            <p>
               Pulled from my personal Notion using{' '}
               <a
                 href='https://developers.notion.com/'
                 target='_blank'
                 rel='noreferrer'
-                className='hover:text-purple-400'
               >
                 their new API!
               </a>{' '}
@@ -127,7 +125,7 @@ export default function Home ({ books }) {
           <section className='flex justify-center mt-20'>
             <button
               onClick={() => window.scrollTo(0, 0)}
-              className='text-body font-sans underline'
+              className='text-body font-sans font-bold hover:text-pink'
             >
               Scroll To Top
             </button>
