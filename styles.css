@@ -4,20 +4,23 @@
 
 @layer base {
   p {
-    @apply text-black;
+    @apply text-black dark:text-white;
     @apply text-body;
     @apply mb-10;
   }
   p a {
-    @apply border-b-2 border-black border-dashed hover:border-pink;
+    @apply border-b-2 border-black dark:border-white border-dashed hover:border-pink dark:hover:border-pink;
   }
   h1 {
-    @apply mb-8 text-h1 font-serif text-black;
+    @apply mb-8 text-h1 font-serif text-black dark:text-white;
   }
   h2 {
-    @apply mb-4 text-h2 font-serif text-black;
+    @apply mb-4 text-h2 font-serif text-black dark:text-white;
   }
   section {
     @apply my-20 lg:my-24;
+  }
+  h4 {
+    @apply text-h4 text-black dark:text-white font-serif mb-1;
   }
 }

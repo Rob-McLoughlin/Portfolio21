@@ -12,15 +12,18 @@ const TechGrid = ({ technologies }) => {
               <li>
                 <div
                   className='
-                absolute
-                block
-                -mt-2 h-16
-                -ml-2 w-16
-                rounded-full
-                z-0
-                group-hover:border-2
-                group-hover:border-dashed
-              group-hover:border-pink
+                    absolute
+                    block
+                    -mt-2 h-16
+                    -ml-2 w-16
+                    rounded-full
+                    z-0
+                    group-hover:border-2
+                    group-hover:border-dashed
+                    group-hover:border-pink
+                    dark:group-hover:border-0
+                    dark:bg-white
+                    dark:group-hover:opacity-80
                 '
                 />
                 <Image

@@ -15,6 +15,7 @@ const changeFavicon = src => {
 
 function MyApp ({ Component, pageProps }) {
   useEffect(() => {
+    // Changes the favicon on leaving the page
     document.addEventListener('visibilitychange', e => {
       if (document.visibilityState === 'hidden') {
         changeFavicon('/favicon/frame-2.ico')

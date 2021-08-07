@@ -14,34 +14,36 @@ const SocialLinks = ({ socials }) => {
       py-8
       bg-white
       bg-opacity-90
+      dark:bg-black
+      dark:bg-opacity-80
       z-10'
       id='social-links'
     >
-      <ul className=' flex px-10 justify-evenly'>
+      <ul className='flex px-10 justify-evenly'>
         <li>
           <Link href={socials.mail}>
-            <a>
+            <a className='dark:text-white'>
               <Mail />
             </a>
           </Link>
         </li>
         <li>
           <Link href={socials.instagram} className='p-2'>
-            <a>
+            <a className='dark:text-white'>
               <Instagram />
             </a>
           </Link>
         </li>
         <li>
           <Link href={socials.twitter} className='p-2'>
-            <a>
+            <a className='dark:text-white'>
               <Twitter />
             </a>
           </Link>
         </li>
         <li>
           <Link href={socials.linkedIn} className='p-2'>
-            <a>
+            <a className='dark:text-white'>
               <LinkedIn />
             </a>
           </Link>

@@ -29,9 +29,9 @@ export default function Home ({ books }) {
           rel='stylesheet'
         />
       </Head>
-      <div className='flex justify-center px-8 bg-white'>
+      <div className='flex justify-center px-8 bg-white dark dark:bg-black'>
         <main className='relative container mx-auto max-w-2xl lg:max-w-xl py-48'>
-          <div className='absolute rounded-full top-12 right-6 border-2 border-dashed border-black z-0 h-16 w-16' />
+          <div className='absolute rounded-full top-12 right-6 border-2 border-dashed border-black dark:border-white z-0 h-16 w-16' />
           <div className='absolute top-12 right-12 z-1'>
             <Image
               className='rounded-full'
@@ -122,7 +122,7 @@ export default function Home ({ books }) {
                 their new API!
               </a>{' '}
             </p>
-            <ol className='list-decimal pl-4 text-black'>
+            <ol className='list-decimal pl-4 text-black dark:text-white'>
               {books.map(book => {
                 return (
                   <li key={book.title} className='mb-4'>
@@ -137,7 +137,7 @@ export default function Home ({ books }) {
           <section className='flex justify-center mt-20'>
             <button
               onClick={() => window.scrollTo(0, 0)}
-              className='text-body font-sans font-bold hover:text-pink'
+              className='text-body font-sans font-bold dark:text-white hover:text-pink'
             >
               Scroll To Top
             </button>
