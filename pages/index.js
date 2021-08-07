@@ -1,8 +1,9 @@
 import Head from 'next/head'
 import Link from 'next/link'
 import Image from 'next/image'
-import { projects, socials } from '@/config/index'
+import { projects, socials, technologies } from '@/config/index'
 import SocialLinks from '@/components/SocialLinks'
+import TechGrid from '@/components/TechGrid'
 import { getReadBooks } from '@/lib/notion'
 
 export async function getStaticProps () {
@@ -39,10 +40,9 @@ export default function Home ({ books }) {
               width={64}
             />
           </div>
-          <section id='#top' className='relative'>
-            <h1 className='mb-8 text-h1 font-serif text-black'>
-              Hi, I’m Rob McLoughlin
-            </h1>
+
+          <section id='#top' className='relative mb-8'>
+            <h1>Hi, I’m Rob McLoughlin</h1>
             <p>
               I’m a product designer building digital products at{' '}
               <Link href='https://www.wearehuman.ie/'>
@@ -63,8 +63,22 @@ export default function Home ({ books }) {
 
           <SocialLinks socials={socials} />
 
+          <section id='technologies'>
+            <h1>Technologies</h1>
+            <p>
+              I have been actively learning about a lot of different
+              technologies in order to build great user experiences. I take
+              pride in my ability to deliver designs in high-quality codebases.
+            </p>
+            <p>
+              Here are some technologies I’ve been making use of in the last six
+              months in both work and personal projects:
+            </p>
+            <TechGrid technologies={technologies} />
+          </section>
+
           <section id='about'>
-            <h1 className='mb-4 text-h1 font-serif text-black'>About</h1>
+            <h1>About</h1>
             <p>
               I’ve been researching, designing and building digital products for
               5 years. I did my undergraduate in Psychology in IADT. After that,
@@ -97,9 +111,7 @@ export default function Home ({ books }) {
               I like to read about design, I go through phases of chomping
               through books about design and business.
             </p>
-            <h2 className='mb-4 text-h2 font-serif text-black'>
-              Recently Read Books
-            </h2>
+            <h2>Recently Read Books</h2>
             <p>
               Pulled from my personal Notion using{' '}
               <a

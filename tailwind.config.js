@@ -6,7 +6,7 @@ module.exports = {
     extend: {
       colors: {
         black: '#3C3C3C',
-        white: '#FFFFFF',
+        white: '#F7F1E3',
         pink: '#F865B2'
       },
       fontFamily: {
@@ -14,7 +14,7 @@ module.exports = {
         sans: ['Helvetica, sans-serif']
       },
       fontSize: {
-        body: ['16px', '24px'],
+        body: ['16px', '30px'],
         h1: ['36px', '36px'],
         h2: ['24px', '24px'],
         h3: ['24px', '30px'],

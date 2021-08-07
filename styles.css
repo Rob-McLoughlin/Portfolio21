@@ -9,8 +9,15 @@
     @apply mb-10;
   }
   p a {
-    @apply hover:text-pink;
-    @apply transition;
-    @apply border-dashed border-b-2 border-black hover:border-solid hover:border-pink;
+    @apply border-b-2 border-black border-dashed hover:border-pink;
+  }
+  h1 {
+    @apply mb-8 text-h1 font-serif text-black;
+  }
+  h2 {
+    @apply mb-4 text-h2 font-serif text-black;
+  }
+  section {
+    @apply my-20 lg:my-24;
   }
 }
