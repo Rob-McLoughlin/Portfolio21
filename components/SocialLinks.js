@@ -22,29 +22,33 @@ const SocialLinks = ({ socials }) => {
       <ul className='flex px-10 justify-evenly'>
         <li>
           <Link href={socials.mail}>
-            <a className='dark:text-white'>
+            <a className='dark:text-white' aria-label='Email Me'>
               <Mail />
+              <span className='hidden'>Email Me</span>
             </a>
           </Link>
         </li>
         <li>
           <Link href={socials.instagram} className='p-2'>
-            <a className='dark:text-white'>
+            <a className='dark:text-white' aria-label='My Instagram'>
               <Instagram />
+              <span className='hidden'>My Instagram</span>
             </a>
           </Link>
         </li>
         <li>
           <Link href={socials.twitter} className='p-2'>
-            <a className='dark:text-white'>
+            <a className='dark:text-white' aria-label='My Twitter'>
               <Twitter />
+              <span className='hidden'>My Twitter</span>
             </a>
           </Link>
         </li>
         <li>
           <Link href={socials.linkedIn} className='p-2'>
-            <a className='dark:text-white'>
+            <a className='dark:text-white' aria-label='My LinkedIn'>
               <LinkedIn />
+              <span className='hidden'>My LinkedIn</span>
             </a>
           </Link>
         </li>

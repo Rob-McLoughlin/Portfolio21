@@ -28,6 +28,7 @@ export default function Home ({ books }) {
           <div className='absolute top-12 right-12 z-1'>
             <Image
               className='rounded-full'
+              alt='A profile image of me in black and white'
               src='/rob-linkedin.jpeg'
               height={64}
               width={64}
@@ -119,7 +120,7 @@ export default function Home ({ books }) {
               {books.map(book => {
                 return (
                   <li key={book.title} className='mb-4'>
-                    <h4 className='text-h4 font-serif mb-1'>{book.title}</h4>
+                    <h3 className='text-h4 font-serif mb-1'>{book.title}</h3>
                     <p className='text-body'>{book.author}</p>
                   </li>
                 )

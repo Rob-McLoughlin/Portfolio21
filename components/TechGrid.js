@@ -8,8 +8,8 @@ const TechGrid = ({ technologies }) => {
       {technologies.map(t => {
         return (
           <Link key={t.url} href={t.url}>
-            <a className='group group-hover:opacity-80'>
-              <li>
+            <li className='group flex cursor-pointer'>
+              <a className='group-hover:opacity-80' name={t.title}>
                 <div
                   className='
                     absolute
@@ -31,10 +31,10 @@ const TechGrid = ({ technologies }) => {
                   src={t.icon}
                   height={size}
                   width={size}
-                  alt={t.name}
+                  alt={t.title}
                 />
-              </li>
-            </a>
+              </a>
+            </li>
           </Link>
         )
       })}
