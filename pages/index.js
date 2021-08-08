@@ -79,12 +79,19 @@ export default function Home ({ books }) {
               I did an MSc in User Experience, also in IADT.
             </p>
             <p>
-              While I was in undergrad, I did an internship in Human. When I
-              finished my undergrad, I went back and have been there since!
-              During my time at Human, the majority of my work has been on
-              Chupi, a global luxury jewellery company based in Ireland. In
-              2021, I became the User Experience Manager at Chupi. My work there
-              has included things like{' '}
+              While I was in undergrad, I did an internship in{' '}
+              <Link href='https://www.wearehuman.ie/'>
+                <a>Human</a>
+              </Link>
+              . When I finished my undergrad, I went back and have been there
+              since! During my time at Human, the majority of my work has been
+              on{' '}
+              <Link href='https://www.chupi.com/'>
+                <a>Chupi</a>
+              </Link>
+              , a global luxury jewellery company based in Ireland. In 2021, I
+              became the User Experience Manager at Chupi. My work there has
+              included things like{' '}
               {Object.entries(projects).map((p, index) => {
                 return (
                   <span key={p[0]}>
