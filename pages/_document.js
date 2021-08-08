@@ -16,6 +16,18 @@ export default class MyDocument extends Document {
             name='description'
             content='Rob McLoughlin is a designer and developer from Dublin, Ireland. Currently UX/UI Developer at Human 💻 and the UX Manager at Chupi 💍.'
           />
+          <meta
+            property='og:title'
+            content='Rob McLoughlin | Designer from Dublin, Ireland'
+          />
+          <meta
+            property='og:description'
+            content='UX/UI Developer at Human 💻 &amp; UX Manager at Chupi 💍.'
+          />
+          <meta
+            property='og:image'
+            content='https://www.robmcloughlin.io/og-image.png'
+          />
         </Head>
         <body>
           <Main />

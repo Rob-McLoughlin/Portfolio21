@@ -7,7 +7,7 @@ const TechGrid = ({ technologies }) => {
     <ul className='flex flex-wrap gap-8 justify-center md:px-24'>
       {technologies.map(t => {
         return (
-          <Link key={t.url} href={t.url}>
+          <Link key={t.url} href={t.url} passHref>
             <li className='group flex cursor-pointer'>
               <a className='group-hover:opacity-80' name={t.title}>
                 <div
