@@ -25,9 +25,19 @@ export default class MyDocument extends Document {
             content='UX/UI Developer at Human 💻 &amp; UX Manager at Chupi 💍.'
           />
           <meta
+            property='twitter:description'
+            content='UX/UI Developer at Human 💻 &amp; UX Manager at Chupi 💍.'
+          />
+          <meta
             property='og:image'
             content='https://www.robmcloughlin.io/og-image.png'
           />
+          <meta
+            property='twitte:image'
+            content='https://www.robmcloughlin.io/og-image.png'
+          />
+          <meta name='twitter:card' content='summary_large_image' />
+          <meta name='twitter:creator' content='@rob_does_ux' />
         </Head>
         <body>
           <Main />
