@@ -5,14 +5,8 @@ import { projects, socials, technologies } from "@/config/index";
 import SocialLinks from "@/components/SocialLinks";
 import TechGrid from "@/components/TechGrid";
 import { getReadBooks } from "@/lib/notion";
+import type { book } from "@/lib/notion";
 import type { GetStaticProps, GetStaticPaths, GetServerSideProps } from "next";
-
-type book = {
-  title: string;
-  author: string;
-  tags: [string];
-  last_updated: string;
-};
 
 type Props = {
   books: book[];
