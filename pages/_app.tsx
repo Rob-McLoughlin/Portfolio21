@@ -3,6 +3,8 @@ import { useEffect } from 'react'
 import { useRouter } from 'next/router'
 import TagManager from 'react-gtm-module'
 
+import type { AppProps } from 'next/app'
+
 const tagManagerArgs = {
   gtmId: 'GTM-545LPZB'
 }
@@ -19,7 +21,7 @@ const changeFavicon = src => {
   document.head.appendChild(link)
 }
 
-function MyApp ({ Component, pageProps }) {
+function Portfolio({ Component, pageProps }: AppProps) {
   const router = useRouter()
   useEffect(() => {
     // Tag Manager
@@ -37,4 +39,4 @@ function MyApp ({ Component, pageProps }) {
   return <Component {...pageProps} />
 }
 
-export default MyApp
+export default Portfolio
